@@ -92,7 +92,7 @@ Formulated SQL queries to derive the following insights from the data as part of
       Online stores have made around 11 million USD in last 6 years and Nebraska store being the top revenue generating based on total revenue followed by stores in Kansas, Nevada in United states.
 
    - #### Delivery Time Analysis
-The average delivery time is approximately 4.53 days, with a minimum of 1 day and a maximum of 17 days. However, it’s crucial to note that the average delivery time calculated is exclusive of null values of around 49,000 records indicating potential data anomalies that need investigation.
+The average delivery time is approximately 4.53 days, with a minimum of 1 day and a maximum of 17 days. However, it’s crucial to note that the average delivery time calculated is exclusive of null values of around 49,000 records indicating potential data anomalies that need further investigation.
 
    ![image](https://github.com/user-attachments/assets/27ef1a52-50cf-41d4-b83b-70d070d29a01)
 

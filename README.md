@@ -1,2 +1,110 @@
-# Capstoneproject_2
-DataSpark: Illuminating Insights for Global Electronics
+|Project Title |DataSpark: Illuminating Insights for Global Electronics|
+| :--- | :--- |
+|**Skills take away From This Project**|Data Cleaning and Preprocessing, EDA,Python, Data Management using SQL, Power Bi/Tableau|
+|**Domain**|Retail Analytics in the Electronics Industry|
+
+-   <ins>**Project Description:**</ins>
+This project mainly focuses on getting insights for Global Electronics to enhance their overall business potential which involves 
+    - Data Loading from csv to RDBMS 
+    - Data cleansing which involves null value handling.
+    - Data analysis of different data sets to understand the dimensions and facts of sales data of Global Electronics 
+        -  Customer table -get a fair understanding of customer spread across different locations, gender and age wise and average order volume and customer sales online vs offline orders.
+        -  Product -Understand top preferred products based on order volume in different levels like Category and subcategory ,profit margin for each product and low performing products in terms of sales revenue.
+        -  Sale - improve overall sales based on understanding product popularity based on order volume and seasonal purchase pattern for each Product ,profit margin at product level.
+        -  Store level order volume and location wise ,size wise  revenue contribution based on order count and visualizing the same on Power BI Dashboard.
+
+-   <ins>**Data cleansing and pre-processing steps:**</ins>
+    -  Extracting the data set from the csv files to pandas dataframe.
+    -  Data cleansing the available dataframe -Check for null values in each dataset and data type conversions
+        -  Customer data-
+            -  Data  type conversions as date for Birthday column, Zip code and State as string.
+            -  Removing space in column names for State code, Zip code columns for standardization before loading to SQL database.
+        -  Sales data-
+            -  Data  type conversions as date for Delivery Date, Order Date and Currency Code as string 
+            -  Removing space in column names for Order Number, Line item, Order Date, Delivery Date, Currency Code columns for standardization before loading to SQL database.
+            -  Observed 49719 null records for Delivery date
+
+        -  Exchange rates-
+            -  Data  type conversions as date for Date column, Currency as string.
+
+        -  Product data-
+            -  Data  type conversions as float for Unit Cost USD, Unit Price USD columns with regular expressions to remove $ .
+            -  Removing space in names for Product Name, Unit Cost USD, Unit Price USD columns for standardization before loading to SQL database
+              
+        -  Store data-
+            -  Data  type conversions as Date for Open Date,
+            -  Remove the space in column names for Open Date and Square Meters for standardization before loading to SQL database
+
+-   <ins>**Data Transformation and loading:**</ins>
+
+    Import the MySQL configuration from common jupyter notebook which has all the common modules used for dataframe creation.
+      - Created Database schema named DataSpark and loaded the customer, sales, product, Exchange rates, Store pandas dataframe to SQL by creating respective tables.
+      - Created a view named Sales_data in MySQL by considering sales table as the fact table and customer, product, store, Exchange rates table as dimensions table of the star schema.
+      - Analysed and taken required columns for deriving metrics, applied custom transformations wherever required. 
+      - Created sqls for each metrics which is used in PowerBi for reporting layer
+
+     ![image](https://github.com/user-attachments/assets/f467bbf6-44d3-4541-9f78-b24048cef14e)
+
+
+-   <ins>**Data insights:**</ins>
+
+Formulated SQL queries to derive the following insights from the data as part of EDA process.
+
+  -   <ins>**Customer Insights:**</ins>
+
+      - #### Customer counts by country:
+        The United States has the highest number of customers offline, followed by online customers. This suggests a strong customer base in the US and significant online sales.
+
+      - #### Customer orders by State
+        Among states, online orders dominate, indicating a substantial portion of customers preferring offline shopping. Northwest Territories, Nebraska, Nevada have the highest number of customers in terms of order counts.
+
+      - #### Customer counts by Age, Gender, Offline vs online
+        Based on different age category, we found highest order count was placed age category between 41 and 60 years.
+        Majority customer base is Male by 1.5%.
+        Offline sales are high compared to online sales
+
+        ![image](https://github.com/user-attachments/assets/88646856-7140-4e11-b290-ca7a8c69caa1)
+
+
+      - #### Customer average order value analysis
+        The average order value for each customer in-store sales and online sale varies. Comparing both the sales medium, I found that in-store sales have higher Average order value compared to online sales and highest order value is 22K USD from a customer in United Kingdom.
+
+-   <ins>**Sales insights:**</ins>
+
+    - #### Seasonal patterns or trends for Order Volume or Revenue:
+      Order volume tends to peak in December, likely due to holiday shopping, understanding these seasonal trends can help optimize inventory management and marketing strategies.
+
+    - #### Order Volume by Year
+      Total Sales revenue has increased steadily from 2016 to 2019, with a peak in 2019. However, there was a significant drop in order volume in 2020, which has led to decrease in sales revenue.
+
+    - #### Overall Sales Performance last 6 years
+      Total Order count found to be around 26,000 and Total Revenue in USD around 55.67 Million in past 6 years
+    
+    -  #### Sales by Product 
+      The company’s best-selling product has been from Computers Category with WWI Desktop PC2.33 X2330 Black around 550 Units sold in total over the last 6 years followed by TV and video category.
+
+    - #### Sales at store level 
+      Online stores have made around 11 million USD in last 6 years and Nebraska store being the top revenue generating based on total revenue followed by stores in Kansas, Nevada in United states.
+
+-   <ins>**Product insights**</ins>
+
+    - #### Product Category wise revenue:
+      Global Electronics produces variety of products out of which Computers category are the best-selling products in terms of Total Revenue based on value of orders volume and revenue and the least being from Games and Toys category.
+
+    - #### Sub Category wise product revenue
+      The top selling products are from Desktop Subcategory followed by Televisions and Projectors & Screens based on total sales revenue in USD and the least performing products being in the Boxed games subcategory.
+    
+    - #### Overall Profit margin product wise
+      Based on sale price and cost involved to produce the product, profit margin is found to be high for Adventure Works Desktop from Computer category around 97K USD for Total Units sold and lowest profit margin for SV USB Data cable. This provides better insights to enhance profit margins for low performing products
+
+    - #### Less performing products
+      The Company’s 10 least selling products are from home appliances Category based on units sold and total revenue and the top least being Lit ware Oscillating Stand Fan with total revenue of 29 USD.
+
+-   <ins>**Store insights**</ins>
+
+    - #### Store performance by revenue
+      The in-store sales is more compared to online stores and overall the stores in United states are performing better in terms of order volume and total revenue of 23.76 Million USD and profit margin of 4 Million USD.
+
+    - #### Store Size and Age wise impact on sales 
+      Stores of size between 1000 to 2000 Square meters based on revenue and order count and stores of age between 11 to 15 years based on order count are performing better in terms of order count and sales revenue.
+

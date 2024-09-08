@@ -69,6 +69,9 @@ Formulated SQL queries to derive the following insights from the data as part of
       - #### Customer average order value analysis
         The average order value for each customer in-store sales and online sale varies. Comparing both the sales medium, I found that in-store sales have higher Average order value compared to online sales and highest order value is 22K USD from a customer in United Kingdom.
 
+![image](https://github.com/user-attachments/assets/ff202fbc-732a-414b-ab83-81ea32b8b0d1)
+
+
 -   <ins>**Sales insights:**</ins>
 
     - #### Seasonal patterns or trends for Order Volume or Revenue:
@@ -77,10 +80,12 @@ Formulated SQL queries to derive the following insights from the data as part of
     - #### Order Volume by Year
       Total Sales revenue has increased steadily from 2016 to 2019, with a peak in 2019. However, there was a significant drop in order volume in 2020, which has led to decrease in sales revenue.
 
-    - #### Overall Sales Performance last 6 years
+![image](https://github.com/user-attachments/assets/c98068a2-84a7-40dc-a77f-cf21d20d13f5)
+
+ - #### Overall Sales Performance last 6 years
       Total Order count found to be around 26,000 and Total Revenue in USD around 55.67 Million in past 6 years
     
-    -  #### Sales by Product 
+ -  #### Sales by Product 
       The company’s best-selling product has been from Computers Category with WWI Desktop PC2.33 X2330 Black around 550 Units sold in total over the last 6 years followed by TV and video category.
 
     - #### Sales at store level 
@@ -91,20 +96,38 @@ Formulated SQL queries to derive the following insights from the data as part of
     - #### Product Category wise revenue:
       Global Electronics produces variety of products out of which Computers category are the best-selling products in terms of Total Revenue based on value of orders volume and revenue and the least being from Games and Toys category.
 
+        ![image](https://github.com/user-attachments/assets/844a180a-b69d-4116-b012-12816dbbb3b7)
+
+
+
     - #### Sub Category wise product revenue
       The top selling products are from Desktop Subcategory followed by Televisions and Projectors & Screens based on total sales revenue in USD and the least performing products being in the Boxed games subcategory.
-    
-    - #### Overall Profit margin product wise
-      Based on sale price and cost involved to produce the product, profit margin is found to be high for Adventure Works Desktop from Computer category around 97K USD for Total Units sold and lowest profit margin for SV USB Data cable. This provides better insights to enhance profit margins for low performing products
 
-    - #### Less performing products
-      The Company’s 10 least selling products are from home appliances Category based on units sold and total revenue and the top least being Lit ware Oscillating Stand Fan with total revenue of 29 USD.
+        ![image](https://github.com/user-attachments/assets/dd10dc51-e9d6-4f0e-b860-77a91ab521af)
+    
+- #### Overall Profit margin product wise
+   Based on sale price and cost involved to produce the product, profit margin is found to be high for Adventure Works Desktop from Computer category around 97K USD for Total Units sold and lowest profit margin for SV USB Data cable. This provides better insights to enhance profit margins for low performing products
+
+  ![image](https://github.com/user-attachments/assets/0041dc2e-b018-486f-9e42-0adbab80a5f9)
+
+- #### Less performing products
+    The Company’s 10 least selling products are from home appliances Category based on units sold and total revenue and the top least being Lit ware Oscillating Stand Fan with total revenue of 29 USD.
+  
+  ![image](https://github.com/user-attachments/assets/a6fa6b9b-abb0-44be-b2df-9ad99f44f784)
+
 
 -   <ins>**Store insights**</ins>
 
     - #### Store performance by revenue
       The in-store sales is more compared to online stores and overall the stores in United states are performing better in terms of order volume and total revenue of 23.76 Million USD and profit margin of 4 Million USD.
 
-    - #### Store Size and Age wise impact on sales 
+        ![image](https://github.com/user-attachments/assets/ae88bcf0-cc1b-4be1-a242-e001495ac31d)
+
+
+ - #### Store Size and Age wise impact on sales 
       Stores of size between 1000 to 2000 Square meters based on revenue and order count and stores of age between 11 to 15 years based on order count are performing better in terms of order count and sales revenue.
+
+     ![image](https://github.com/user-attachments/assets/46454e5e-d074-4c5b-9fb1-c566097f334c)   ![image](https://github.com/user-attachments/assets/0457964b-247f-4133-a1b6-01e365764dc1) 
+
+
 

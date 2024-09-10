@@ -36,6 +36,8 @@ COUNT(distinct tbl.ordernumber) as orderCount
 from dataspark.sales_data tbl
 
 
+-- Additional analysis-----
+
 -- Analysing revenue drop in year 2020
 select  
 Year(Orderdate) Yeartrend,
@@ -46,7 +48,18 @@ group by 1 order by 3 desc
 
 
 
-select * from dataspark.stores s 
+-- Sales revenue by currency
+select
+tbl.ProductCategory ,
+tbl.exchange,
+tbl.CurrencyCode,
+COUNT(distinct tbl.ordernumber) as orderCount,
+sum(floor(tbl.UnitPriceUSD*tbl.Quantity))as RevenueUsd,
+sum(floor((tbl.UnitPriceUSD*tbl.Quantity)/tbl.exchange))as ExchangeSalerevenue,
+sum(floor(tbl.UnitCostUSD*tbl.Quantity))as ProductioncostUSD,
+sum(floor((tbl.UnitCostUSD*tbl.Quantity)/tbl.exchange)) as Productioncostexchange
+from dataspark.sales_data tbl
+group by 1,2,3 order by 4 desc
 
 
 

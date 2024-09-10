@@ -94,7 +94,12 @@ Formulated SQL queries to derive the following insights from the data as part of
    - #### Delivery Time Analysis
 The average delivery time is approximately 4.53 days, with a minimum of 1 day and a maximum of 17 days. However, it’s crucial to note that the average delivery time calculated is exclusive of null values of around 49,000 records indicating potential data anomalies that need further investigation.
 
-   ![image](https://github.com/user-attachments/assets/27ef1a52-50cf-41d4-b83b-70d070d29a01)
+<img src="https://github.com/user-attachments/assets/27ef1a52-50cf-41d4-b83b-70d070d29a01" width="500">
+
+- #### Sales revenue by currency at Product category level
+Tried to find difference in total revenue when compared revenues in USD with other country currencies.However,found marginal difference in revenues wrt USD and other currencies.This proves the pricing of the product matches across the globe.
+
+  ![image](https://github.com/user-attachments/assets/f31cd1e3-5bbe-4deb-aff7-237542a7b73d)
 
 -   <ins>**Product insights**</ins>
 

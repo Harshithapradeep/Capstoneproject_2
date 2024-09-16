@@ -1,4 +1,4 @@
-select * from dataspark.sales_data sd 
+select * from dataspark.sales_data tbl
 
 
 
@@ -13,6 +13,8 @@ select sl.*,
     c.State as State,
     c.Country as Country,
     c.Birthday as Birthday,
+    c.Name as CustomerName,
+    c.Continent as Continent,
     floor(datediff(current_date(),c.Birthday) / 365) as age,
     case
         when floor(datediff(current_date(),c.Birthday) / 365)  <= 18 then '< 18'
